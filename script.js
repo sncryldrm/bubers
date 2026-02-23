@@ -5,6 +5,147 @@
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
+    // ─── i18n Translation System ───
+    const translations = {
+        en: {
+            'nav.about': 'About',
+            'nav.products': 'Products',
+            'nav.process': 'Process',
+            'nav.contact': 'Contact',
+            'hero.eyebrow': 'Premium Import & Distribution',
+            'hero.t1': 'Global',
+            'hero.t2': 'Brands',
+            'hero.t3': 'to Turkey.',
+            'hero.t4': 'Delivered.',
+            'hero.sub': 'We bring global premium brands to the Turkish market. Backed by a strong trade infrastructure and the right marketing approach.',
+            'hero.scroll': 'Explore',
+            'about.heading': 'We don\'t import quality,<br><span class="accent-text">we build trust.</span>',
+            'about.p1': 'Founded in 2026 in Ankara, Bubers is a foreign trade and marketing company that distributes globally recognized premium brands in Turkey. From sourcing to quality control, logistics to point of sale, we manage every step.',
+            'about.p2': 'We don\'t just bring products, we write brand stories in Turkey together. Every partnership we build exists to deliver a flawless experience to the end consumer.',
+            'about.founded': 'Founded',
+            'products.heading': 'The collection we distribute:<br><span class="accent-text">GoBe Kids.</span>',
+            'product.1': '5-compartment, spill-resistant snack container with a push-button spin. Kids love it, parents relax.',
+            'product.2': 'A lunchbox and snack spinner in one. Two functions in a single product, practical and fun.',
+            'product.3': 'Designed for bigger portions. Slide-open system with spacious compartments.',
+            'product.4': 'Original design, colorful options. BPA-free, dishwasher-safe materials.',
+            'product.5t': 'Detailed Design',
+            'product.5': 'Each compartment is protected with a leak-proof lid. Easy to clean, easy to carry.',
+            'process.label': 'Our Process',
+            'process.heading': 'From sourcing to delivery,<br><span class="accent-text">end-to-end control.</span>',
+            'process.s1t': 'Discovery & Analysis',
+            'process.s1p': 'We research the market, evaluate the brand, and check for strategic fit. That\'s how the right partnerships begin.',
+            'process.s2t': 'Agreement & Sourcing',
+            'process.s2p': 'We sign distribution agreements with global brands and set up a reliable supply chain.',
+            'process.s3t': 'Quality Control',
+            'process.s3p': 'Every product goes through independent testing. Nothing hits the shelf without international certification.',
+            'process.s4t': 'Logistics & Delivery',
+            'process.s4p': 'From customs clearance to warehousing and distribution, everything is under our control.',
+            'process.s5t': 'Marketing & Growth',
+            'process.s5p': 'We position brands in the Turkish market, build awareness, and grow sales channels together.',
+            'footer.heading': 'Let\'s talk<br>partnership.',
+            'footer.office': 'Headquarters',
+            'footer.phone': 'Phone',
+            'footer.social': 'Social Media',
+            'footer.privacy': 'Privacy Policy'
+        },
+        tr: {
+            'nav.about': 'Hakkımızda',
+            'nav.products': 'Ürünler',
+            'nav.process': 'Süreç',
+            'nav.contact': 'İletişim',
+            'hero.eyebrow': 'Premium İthalat & Distribütörlük',
+            'hero.t1': 'Dünya',
+            'hero.t2': 'Markalarını',
+            'hero.t3': 'Türkiye\'ye',
+            'hero.t4': 'Taşıyoruz.',
+            'hero.sub': 'Global premium markaları Türk pazarıyla buluşturuyoruz. Güçlü dış ticaret altyapımız ve doğru pazarlama anlayışıyla tanışın.',
+            'hero.scroll': 'Keşfet',
+            'about.heading': 'Kaliteyi ithal etmiyoruz,<br><span class="accent-text">güveni inşa ediyoruz.</span>',
+            'about.p1': '2026 yılında Ankara\'da kurulan Bubers İthalat, dünya çapında bilinen premium markaların Türkiye distribütörlüğünü yapan bir dış ticaret ve pazarlama şirketidir. Tedarik sürecinden kalite kontrole, lojistikten satış noktasına kadar her aşamayı biz yönetiyoruz.',
+            'about.p2': 'Sadece ürün getirmiyoruz, markaların Türkiye\'deki hikayesini birlikte yazıyoruz. Kurduğumuz her ortaklık, tüketiciye kadar kusursuz bir deneyim sunmak için var.',
+            'about.founded': 'Kuruluş Yılı',
+            'products.heading': 'Distribütörlüğünü yaptığımız<br><span class="accent-text">GoBe Kids koleksiyonu.</span>',
+            'product.1': 'Buton ile dönen 5 bölmeli, dökülmeye dayanıklı atıştırmalık kabı. Çocuklar seviyor, anne babalar rahat ediyor.',
+            'product.2': 'Hem beslenme çantası hem snack spinner. Tek üründe iki fonksiyon, pratik ve eğlenceli.',
+            'product.3': 'Daha büyük porsiyonlar için tasarlandı. Sürgülü açılış sistemi ve geniş bölmeler.',
+            'product.4': 'Orijinal tasarım, renkli seçenekler. BPA içermeyen, bulaşık makinesine uygun güvenli materyal.',
+            'product.5t': 'Detaylı Tasarım',
+            'product.5': 'Her bölme sızdırmaz kapakla korunuyor. Temizlemesi kolay, taşıması pratik.',
+            'process.label': 'Çalışma Sürecimiz',
+            'process.heading': 'Tedarikten teslimata,<br><span class="accent-text">uçtan uca kontrol.</span>',
+            'process.s1t': 'Keşif ve Analiz',
+            'process.s1p': 'Pazarı araştırıyoruz, markayı değerlendiriyoruz, stratejik olarak uyup uymadığına bakıyoruz. Doğru ortaklıklar böyle başlıyor.',
+            'process.s2t': 'Anlaşma ve Tedarik',
+            'process.s2p': 'Global markalarla distribütörlük anlaşması yapıyoruz, güvenilir bir tedarik zinciri kuruyoruz.',
+            'process.s3t': 'Kalite Kontrol',
+            'process.s3p': 'Her ürün bağımsız testlerden geçiyor. Uluslararası sertifikalar olmadan hiçbir şey rafa çıkmıyor.',
+            'process.s4t': 'Lojistik ve Teslimat',
+            'process.s4p': 'Gümrüklemeden depolamaya, dağıtımdan teslimata kadar her şey bizim kontrolümüzde.',
+            'process.s5t': 'Pazarlama ve Büyüme',
+            'process.s5p': 'Markayı Türkiye\'de konumlandırıyoruz, bilinirliği artırıyoruz ve satış kanallarını birlikte büyütüyoruz.',
+            'footer.heading': 'İş birliği için<br>konuşalım.',
+            'footer.office': 'Merkez Ofis',
+            'footer.phone': 'Telefon',
+            'footer.social': 'Sosyal Medya',
+            'footer.privacy': 'Gizlilik Politikası'
+        }
+    };
+
+    let currentLang = localStorage.getItem('bubers-lang') || 'tr';
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('bubers-lang', lang);
+        document.documentElement.lang = lang;
+
+        // Text content
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+
+        // HTML content (for elements with <br> and <span>)
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+            const key = el.getAttribute('data-i18n-html');
+            if (translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Toggle active class on lang links
+        const trLink = document.getElementById('langTR');
+        const enLink = document.getElementById('langEN');
+        if (trLink && enLink) {
+            trLink.classList.toggle('lang-active', lang === 'tr');
+            enLink.classList.toggle('lang-active', lang === 'en');
+        }
+    }
+
+    // Language toggle click handlers
+    const langTR = document.getElementById('langTR');
+    const langEN = document.getElementById('langEN');
+
+    if (langTR) {
+        langTR.addEventListener('click', (e) => {
+            e.preventDefault();
+            setLanguage('tr');
+        });
+    }
+    if (langEN) {
+        langEN.addEventListener('click', (e) => {
+            e.preventDefault();
+            setLanguage('en');
+        });
+    }
+
+    // Apply saved language on load
+    if (currentLang !== 'tr') {
+        setLanguage(currentLang);
+    }
+
+
     // ─── Hero Entrance Animations ───
     const heroTL = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
