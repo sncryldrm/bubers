@@ -4,208 +4,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubers | Premium İthalat Çözümleri</title>
-    <!-- Modern, high-end fonts -->
+    <title>Bubers | Premium İthalat & Distribütörlük</title>
+    <meta name="description"
+        content="Bubers İthalat, dünya çapında tanınan premium markaların Türkiye distribütörlüğünü üstlenen güçlü bir dış ticaret ve pazarlama şirketi.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700;800&family=Inter:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Smooth Scroll Container -->
-    <div id="smooth-wrapper">
-        <div id="smooth-content">
+    <!-- ═══════════════════════════════════════ -->
+    <!-- NAVBAR -->
+    <!-- ═══════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">BUBERS<span class="logo-dot">.</span></a>
 
-            <!-- Minimalist Navbar -->
-            <nav class="nav-minimal">
-                <div class="nav-inner">
-                    <a href="#" class="brand">BUBERS.</a>
-                    <div class="nav-links">
-                        <a href="#vision" class="nav-item">Vizyon</a>
-                        <a href="#product" class="nav-item">Ürün</a>
-                        <a href="#process" class="nav-item">Süreç</a>
-                    </div>
-                    <a href="#contact" class="btn-contact">İletişim</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link" data-i18n="nav.about">Hakkımızda</a>
+                <a href="#products" class="nav-link" data-i18n="nav.products">Ürünler</a>
+                <a href="#process" class="nav-link" data-i18n="nav.process">Süreç</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">İletişim</a>
+            </div>
+
+            <div class="nav-right">
+                <div class="lang-toggle">
+                    <a href="#" id="langTR" class="lang-active">TR</a>
+                    <span class="lang-sep">/</span>
+                    <a href="#" id="langEN">EN</a>
                 </div>
-            </nav>
+                <a href="#contact" class="nav-cta" data-i18n="nav.contact">İletişim</a>
+                <button class="hamburger" id="hamburger" aria-label="Menü">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-            <!-- Hero Section (Typography Driven) -->
-            <header class="hero-section">
-                <div class="hero-grid">
-                    <div class="hero-text-area">
-                        <div class="badge fade-up">01 — İTHALATIN YENİ YÜZÜ</div>
-                        <h1 class="fade-up delay-1">Global <br>Standartlar.<br><span class="text-accent">Yerel
-                                Güven.</span></h1>
-                        <p class="fade-up delay-2">Plastik ürünleri tedariğinde devrim yaratıyoruz. Türkiye pazarı için
-                            özenle seçilmiş, inovatif, güvenli ve premium çözümler BUBERS ile yeniden tanımlanıyor.</p>
-                        <div class="explore-wrap fade-up delay-3">
-                            <a href="#product" class="explore-btn">
-                                <div class="circle-arrow">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <span>Keşfet</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-visual-area parallax-wrap">
-                        <!-- High-end architectural/abstract placeholder -->
-                        <div class="image-reveal">
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop"
-                                alt="Premium Corporate Space" class="parallax-img">
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Vision Statement (Large Typography) -->
-            <section id="vision" class="vision-section">
-                <div class="container-narrow">
-                    <h2 class="vision-text stagger-text">
-                        "Amacımız sadece ürün getirmek değil; Türkiye'deki kalite algısını <span
-                            class="text-accent">dünya standartlarının</span> üzerine çıkarmaktır."
-                    </h2>
-                    <div class="vision-info fade-up">
-                        <div class="info-block">
-                            <h4>Odak Noktamız</h4>
-                            <p>İnsan sağlığına %100 uyumlu, sertifikalı ve estetik açıdan kusursuz plastik materyalleri
-                                lokal pazarla buluşturmak.</p>
-                        </div>
-                        <div class="info-block">
-                            <h4>Farkımız</h4>
-                            <p>Geleneksel ithalat anlayışını yıkarak, modern, şeffaf ve tamamen kalite odaklı bir B2B
-                                tedarik zinciri yaratmak.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Apple-Style Product Showcase -->
-            <section id="product" class="product-showcase-v2">
-                <div class="showcase-header text-center fade-up">
-                    <span class="eyebrow">İLK ÜRÜNÜMÜZ: SIGNATURE SERİSİ</span>
-                    <h2 class="massive-title">Akıllı<br>Beslenme.</h2>
-                </div>
-
-                <div class="showcase-sticky-container">
-                    <div class="product-gallery">
-                        <!-- High quality product placeholder -->
-                        <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?q=80&w=1000&auto=format&fit=crop"
-                            alt="Premium Product Detail" class="product-detail-img scale-on-scroll">
-                    </div>
-
-                    <div class="product-specs">
-                        <div class="spec-row fade-up">
-                            <div class="spec-num">01</div>
-                            <div class="spec-details">
-                                <h3>Sıfır Taviz: Güvenlik</h3>
-                                <p>BPA kalıntısı içermeyen, medikal sınıf hassasiyetinde üretilmiş %100 güvenli Tritan™
-                                    ve gıdaya uygun silikon birleşimi.</p>
-                            </div>
-                        </div>
-                        <div class="spec-row fade-up">
-                            <div class="spec-num">02</div>
-                            <div class="spec-details">
-                                <h3>Kusursuz Mühendislik</h3>
-                                <p>Çocuk ergonomisine uygun yuvarlatılmış köşeler. Sızdırmaz contalar ve bölmeli,
-                                    inovatif döndürülebilir mekanizma.</p>
-                            </div>
-                        </div>
-                        <div class="spec-row fade-up">
-                            <div class="spec-num">03</div>
-                            <div class="spec-details">
-                                <h3>Estetik & Form</h3>
-                                <p>Fonksiyonelliği modern tasarımla birleştiren, göze hitap eden mat yüzey bitişi ve
-                                    premium dokunma hissi.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Process Grid (Brutalist/Minimalist) -->
-            <section id="process" class="process-section">
-                <div class="process-grid">
-                    <div class="process-title-area fade-up">
-                        <h2>Sıfır Hata<br>Metodolojisi</h2>
-                        <p>Tedarik zincirimizin her adımı, global endüstri standartlarını aşacak şekilde tasarlanmıştır.
-                        </p>
-                    </div>
-                    <div class="process-cards">
-                        <div class="p-card fade-up">
-                            <div class="p-card-top">
-                                <span>I.</span>
-                                <h4>Sourcing</h4>
-                            </div>
-                            <p>Dünya çapında yalnızca elit üreticilerle ve patentli teknolojilerle kurulan sarsılmaz
-                                stratejik ortaklıklar.</p>
-                        </div>
-                        <div class="p-card fade-up delay-1">
-                            <div class="p-card-top">
-                                <span>II.</span>
-                                <h4>Verification</h4>
-                            </div>
-                            <p>Uluslararası bağımsız laboratuvarlar (SGS, Intertek) tarafından onaylanmış kesintiiz
-                                kalite kontrol testleri.</p>
-                        </div>
-                        <div class="p-card fade-up">
-                            <div class="p-card-top">
-                                <span>III.</span>
-                                <h4>Logistics</h4>
-                            </div>
-                            <p>Gelişmiş tedarik ağı yönetimi ile uçtan uca izlenebilir, hasarsız ve zamanında
-                                gümrükleme/teslimat süreçleri.</p>
-                        </div>
-                        <div class="p-card fade-up delay-1 bg-dark">
-                            <div class="p-card-top">
-                                <span>IV.</span>
-                                <h4>B2B Network</h4>
-                            </div>
-                            <p>Yerel distribütörler için kesintisiz stok garantisi ve premium marka konumlandırma
-                                desteği.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- High-end Contact / Footer -->
-            <footer id="contact" class="footer-premium">
-                <div class="footer-top">
-                    <div class="footer-cta fade-up">
-                        <h2>İş Ortaklığı<br>İçin Hazırız.</h2>
-                        <a href="mailto:corporate@bubers.com.tr" class="massive-link">corporate@bubers.com.tr</a>
-                    </div>
-                    <div class="footer-info fade-up delay-1">
-                        <div class="f-group">
-                            <h5>Merkez Ofis</h5>
-                            <p>Büyükdere Cad. No:1<br>Levent, Beşiktaş<br>İstanbul, TR</p>
-                        </div>
-                        <div class="f-group">
-                            <h5>Operasyon</h5>
-                            <p>T: +90 (212) 555 00 00<br>Lojistik: logistics@bubers.com.tr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <span class="brand-large">BUBERS</span>
-                    <div class="footer-legal">
-                        <span>&copy; 2026 Bubers İthalat A.Ş.</span>
-                        <a href="#">Gizlilik</a>
-                        <a href="#">KVKK</a>
-                    </div>
-                </div>
-            </footer>
-
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="#about" class="mobile-link" data-i18n="nav.about">Hakkımızda</a>
+            <a href="#products" class="mobile-link" data-i18n="nav.products">Ürünler</a>
+            <a href="#process" class="mobile-link" data-i18n="nav.process">Süreç</a>
+            <a href="#contact" class="mobile-link" data-i18n="nav.contact">İletişim</a>
+            <div class="mobile-info">
+                <span>info@bubers.com.tr</span>
+            </div>
         </div>
     </div>
 
+    <!-- ═══════════════════════════════════════ -->
+    <!-- HERO -->
+    <!-- ═══════════════════════════════════════ -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span class="eyebrow-text" data-i18n="hero.eyebrow">Premium İthalat &amp; Distribütörlük</span>
+            </div>
+            <h1 class="hero-title" id="heroTitle">
+                <span class="title-line"><span class="title-word" data-i18n="hero.t1">Dünya</span> <span
+                        class="title-word" data-i18n="hero.t2">Markalarını</span></span>
+                <span class="title-line"><span class="title-word" data-i18n="hero.t3">Türkiye'ye</span></span>
+                <span class="title-line"><span class="title-word accent-word"
+                        data-i18n="hero.t4">Taşıyoruz.</span></span>
+            </h1>
+            <p class="hero-sub" id="heroSub" data-i18n="hero.sub">Global premium markaları Türk pazarıyla
+                buluşturuyoruz. Güçlü dış ticaret
+                altyapımız ve doğru pazarlama anlayışıyla tanışın.</p>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-line"></div>
+            <span data-i18n="hero.scroll">Keşfet</span>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ABOUT -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-left">
+                    <span class="section-label reveal-item" data-i18n="nav.about">Hakkımızda</span>
+                    <h2 class="about-heading reveal-item" data-i18n-html="about.heading">
+                        Kaliteyi ithal etmiyoruz,<br>
+                        <span class="accent-text">güveni inşa ediyoruz.</span>
+                    </h2>
+                    <p class="about-text reveal-item" data-i18n="about.p1">
+                        2026 yılında Ankara'da kurulan Bubers İthalat, dünya çapında bilinen premium markaların
+                        Türkiye distribütörlüğünü yapan bir dış ticaret ve pazarlama şirketidir.
+                        Tedarik sürecinden kalite kontrole, lojistikten satış noktasına kadar
+                        her aşamayı biz yönetiyoruz.
+                    </p>
+                    <p class="about-text reveal-item" data-i18n="about.p2">
+                        Sadece ürün getirmiyoruz, markaların Türkiye'deki hikayesini birlikte yazıyoruz.
+                        Kurduğumuz her ortaklık, tüketiciye kadar kusursuz bir deneyim sunmak için var.
+                    </p>
+                </div>
+                <div class="about-right reveal-item">
+                    <div class="about-year">
+                        <span class="year-number">2026</span>
+                        <span class="year-label" data-i18n="about.founded">Kuruluş Yılı</span>
+                    </div>
+                    <div class="about-location">
+                        <span class="location-city">Ankara</span>
+                        <span class="location-detail">Gaziosmanpaşa, TR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PRODUCTS -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="section products-section" id="products">
+        <div class="container">
+            <span class="section-label reveal-item" data-i18n="nav.products">Ürünler</span>
+            <h2 class="section-heading reveal-item" data-i18n-html="products.heading">
+                Distribütörlüğünü yaptığımız<br>
+                <span class="accent-text">GoBe Kids koleksiyonu.</span>
+            </h2>
+        </div>
+        <div class="products-slider-wrap reveal-item">
+            <div class="swiper productsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1: Snack Spinner Flip -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="https://www.gobekids.co/cdn/shop/files/OriginalSnackSpinner_GoBeGrey_5825b8a0-2cfe-4d63-9c0d-93a5f93cb841_2000x.png?v=1754414348"
+                                    alt="Snack Spinner Flip" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3>Snack Spinner Flip</h3>
+                                <p data-i18n="product.1">Buton ile dönen 5 bölmeli, dökülmeye dayanıklı atıştırmalık
+                                    kabı. Çocuklar seviyor,
+                                    anne babalar rahat ediyor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Lunchbox -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="https://www.gobekids.co/cdn/shop/files/GoBeLunchbox_Updated_2000x.png?v=1714340717"
+                                    alt="GoBe Lunchbox" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3>2-in-1 Lunchbox</h3>
+                                <p data-i18n="product.2">Hem beslenme çantası hem snack spinner. Tek üründe iki
+                                    fonksiyon, pratik ve
+                                    eğlenceli.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Large Snack Spinner -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="https://www.gobekids.co/cdn/shop/files/LargeSnackSpinner_Mint_2000x.png?v=1714339862"
+                                    alt="Large Snack Spinner" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3>Large Snack Spinner Slide</h3>
+                                <p data-i18n="product.3">Daha büyük porsiyonlar için tasarlandı. Sürgülü açılış sistemi
+                                    ve geniş bölmeler.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4: Snack Spinner (Color Variant) -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0036/5907/1588/files/15.png?v=1725547835"
+                                    alt="GoBe Snack Spinner" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3>Snack Spinner Classic</h3>
+                                <p data-i18n="product.4">Orijinal tasarım, renkli seçenekler. BPA içermeyen, bulaşık
+                                    makinesine uygun güvenli
+                                    materyal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0036/5907/1588/files/18.png?v=1725547835"
+                                    alt="GoBe Ürün Detay" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-i18n="product.5t">Detaylı Tasarım</h3>
+                                <p data-i18n="product.5">Her bölme sızdırmaz kapakla korunuyor. Temizlemesi kolay,
+                                    taşıması pratik.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination products-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PROCESS -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="section process" id="process">
+        <div class="container">
+            <span class="section-label reveal-item" data-i18n="process.label">Çalışma Sürecimiz</span>
+            <h2 class="section-heading reveal-item" data-i18n-html="process.heading">
+                Tedarikten teslimata,<br>
+                <span class="accent-text">uçtan uca kontrol.</span>
+            </h2>
+            <div class="process-timeline">
+                <div class="process-step reveal-item">
+                    <div class="step-marker">
+                        <span class="step-num">I</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-i18n="process.s1t">Keşif ve Analiz</h3>
+                        <p data-i18n="process.s1p">Pazarı araştırıyoruz, markayı değerlendiriyoruz, stratejik olarak
+                            uyup uymadığına bakıyoruz. Doğru ortaklıklar böyle başlıyor.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-item">
+                    <div class="step-marker">
+                        <span class="step-num">II</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-i18n="process.s2t">Anlaşma ve Tedarik</h3>
+                        <p data-i18n="process.s2p">Global markalarla distribütörlük anlaşması yapıyoruz, güvenilir
+                            bir tedarik zinciri kuruyoruz.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-item">
+                    <div class="step-marker">
+                        <span class="step-num">III</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-i18n="process.s3t">Kalite Kontrol</h3>
+                        <p data-i18n="process.s3p">Her ürün bağımsız testlerden geçiyor. Uluslararası sertifikalar
+                            olmadan hiçbir şey rafa çıkmıyor.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-item">
+                    <div class="step-marker">
+                        <span class="step-num">IV</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-i18n="process.s4t">Lojistik ve Teslimat</h3>
+                        <p data-i18n="process.s4p">Gümrüklemeden depolamaya, dağıtımdan teslimata kadar
+                            her şey bizim kontrolümüzde.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-item">
+                    <div class="step-marker">
+                        <span class="step-num">V</span>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-i18n="process.s5t">Pazarlama ve Büyüme</h3>
+                        <p data-i18n="process.s5p">Markayı Türkiye'de konumlandırıyoruz, bilinirliği artırıyoruz
+                            ve satış kanallarını birlikte büyütüyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- CONTACT / FOOTER -->
+    <!-- ═══════════════════════════════════════ -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-cta reveal-item">
+                    <span class="section-label" data-i18n="nav.contact">İletişim</span>
+                    <h2 class="footer-heading" data-i18n-html="footer.heading">
+                        İş birliği için<br>konuşalım.
+                    </h2>
+                    <a href="mailto:info@bubers.com.tr" class="footer-email">info@bubers.com.tr</a>
+                </div>
+                <div class="footer-details">
+                    <div class="footer-group reveal-item">
+                        <h4 data-i18n="footer.office">Merkez Ofis</h4>
+                        <p>Gaziosmanpaşa (GOP)<br>Ankara, Türkiye</p>
+                    </div>
+                    <div class="footer-group reveal-item">
+                        <h4 data-i18n="footer.phone">Telefon</h4>
+                        <p>+90 (312) 000 00 00</p>
+                    </div>
+                    <div class="footer-group reveal-item">
+                        <h4 data-i18n="footer.social">Sosyal Medya</h4>
+                        <div class="social-links">
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-brand">BUBERS</span>
+                <div class="footer-legal">
+                    <span>&copy; 2026 Bubers İthalat</span>
+                    <a href="#" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                    <a href="#">KVKK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SCRIPTS -->
+    <!-- ═══════════════════════════════════════ -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
