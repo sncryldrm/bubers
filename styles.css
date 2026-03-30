@@ -4,13 +4,13 @@
 
 :root {
     /* Palette */
-    --bg: #FAFAF8;
-    --bg-dark: #0A0A0A;
-    --text: #111111;
-    --text-muted: #6B6B6B;
-    --text-light: #999999;
-    --accent: #C8A97E;
-    --border: #E8E6E1;
+    --bg: #F3EEE5;
+    --bg-dark: #0F1A2A;
+    --text: #0F1A2A;
+    --text-muted: #586981;
+    --text-light: #9BA8BA;
+    --accent: #C6A56B;
+    --border: #E0D6C8;
     --white: #FFFFFF;
 
     /* Typography */
