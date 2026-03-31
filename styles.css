@@ -126,16 +126,17 @@ h4 {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.75rem 0;
+    padding: 1rem 0; /* Modern UI standard */
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
     transition: all var(--duration) var(--ease);
 }
 
 .navbar.scrolled {
-    padding: 1rem 0;
-    background: rgba(250, 250, 248, 0.85);
+    padding: 0.6rem 0;
+    background: rgba(243, 238, 229, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
 }
 
 .nav-inner {
@@ -421,14 +422,18 @@ h4 {
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(243, 238, 229, 0.75); /* --bg color with opacity for text readability */
-    z-index: -1;
-    pointer-events: none;
+    display: none; /* Fully removed to allow direct image view */
+}
+
+.hero-glass-card {
+    max-width: 850px;
+    background: rgba(243, 238, 229, 0.05); /* Extremely sheer glass, almost invisible color wash */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Very faint glass edge */
+    padding: 3.5rem;
+    box-shadow: 0 20px 40px rgba(15, 26, 42, 0.08); /* Minimal shadow */
 }
 
 .hero-content {
@@ -967,6 +972,11 @@ h4 {
 
     .hero {
         padding-top: 6rem;
+    }
+
+    .hero-glass-card {
+        padding: 2rem;
+        border-radius: 16px;
     }
 }
 
