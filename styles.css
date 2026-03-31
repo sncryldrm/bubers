@@ -148,16 +148,51 @@ h4 {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 1.35rem; /* Space between icon and text (increased from 1.1rem) */
+    text-decoration: none;
     z-index: 1001;
 }
 
-.logo-dot {
-    color: var(--accent);
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* Increased from 48px */
+}
+
+.logo-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 2.1rem; /* Increased from 1.7rem */
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    color: var(--text);
+}
+
+.brand-sub {
+    font-family: var(--font-body);
+    font-size: 1.15rem; /* Increased from 0.95rem */
+    font-weight: 400;
+    letter-spacing: 0.18em; /* tracked out to match BUBERS width */
+    line-height: 1;
+    color: var(--text);
+    margin-top: 0.15rem;
+    margin-left: 0.05rem;
 }
 
 .nav-links {
