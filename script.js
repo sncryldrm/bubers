@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── Products Section Glow ───
     gsap.to('.products-section', {
-        backgroundImage: 'radial-gradient(ellipse at center, rgba(200,169,126,0.03) 0%, transparent 70%)',
+        backgroundImage: 'radial-gradient(ellipse at center, rgba(0,71,171,0.03) 0%, transparent 70%)',
         scrollTrigger: {
             trigger: '.products-section',
             start: 'top 60%',
