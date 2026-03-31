@@ -146,6 +146,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // ─── Hero Background Slider ───
+    const heroBgImages = [
+        'assets/slider/1.jpg',
+        'assets/slider/2.jpg',
+        'assets/slider/3.jpg'
+    ];
+    const heroSlider = document.getElementById('heroBgSlider');
+    if (heroSlider) {
+        let currentSlideIndex = 0;
+        
+        // Create slide elements
+        heroBgImages.forEach((imgSrc, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'hero-bg-slide';
+            slide.style.backgroundImage = `url('${imgSrc}')`;
+            if (index === 0) slide.classList.add('active');
+            heroSlider.appendChild(slide);
+        });
+
+        // Rotate slides
+        setInterval(() => {
+            const slides = document.querySelectorAll('.hero-bg-slide');
+            if (slides.length > 1) {
+                slides[currentSlideIndex].classList.remove('active');
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                slides[currentSlideIndex].classList.add('active');
+            }
+        }, 5000); // Changed slide every 5 seconds
+    }
+
     // ─── Hero Entrance Animations ───
     const heroTL = gsap.timeline({ defaults: { ease: 'power4.out' } });
 

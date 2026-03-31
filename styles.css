@@ -393,6 +393,44 @@ h4 {
     pointer-events: none;
 }
 
+/* Hero Background Slider */
+.hero-bg-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.hero-bg-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-bg-slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(243, 238, 229, 0.75); /* --bg color with opacity for text readability */
+    z-index: -1;
+    pointer-events: none;
+}
+
 .hero-content {
     max-width: var(--container);
     margin: 0 auto;
