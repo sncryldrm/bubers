@@ -170,31 +170,17 @@ h4 {
 
 .logo-text {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    text-align: left;
+    height: 34px; /* Slightly smaller for better proportion with icon */
+    transform: translateY(2px); /* Optical vertical alignment */
 }
 
-.brand-name {
-    font-family: var(--font-heading);
-    font-size: 2.1rem; /* Increased from 1.7rem */
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    line-height: 1;
-    color: var(--text);
+.logo-img-text {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
-
-.brand-sub {
-    font-family: var(--font-body);
-    font-size: 1.15rem; /* Increased from 0.95rem */
-    font-weight: 400;
-    letter-spacing: 0.18em; /* tracked out to match BUBERS width */
-    line-height: 1;
-    color: var(--text);
-    margin-top: 0.15rem;
-    margin-left: 0.05rem;
-}
-
 .nav-links {
     display: flex;
     gap: 2.5rem;
